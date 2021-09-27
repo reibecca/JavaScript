@@ -65,3 +65,13 @@ var age = 268
 var template = (`I am ${age} years old`)
 
 console.log(template)
+
+
+// BONUS
+
+var changed = bonjour
+changed = changed.Allreplace("o", "a")
+
+console.log(changed)
+
+// fonctionne pas sur Mac
