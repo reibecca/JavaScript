@@ -21,3 +21,7 @@ if (result <= 0.5) {
 } else {
     console.log(mathFloor)
 }
+
+
+// Solution avec le modulo
+
