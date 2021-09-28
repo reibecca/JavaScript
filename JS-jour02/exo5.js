@@ -9,5 +9,5 @@ console.log(test >= bis)
 console.log(test <= bis)
 console.log(test == bis)
 console.log(test === bis)
-console.log(test != bis)
+console.log(test != bis) // non égal
 console.log(test !== bis)
