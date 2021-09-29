@@ -10,6 +10,7 @@ console.table(fruits)
 
 var ingredients = ["eggs", "milk", "butter"]
 console.log(ingredients[2])
+console.log(ingredients.indexOf("butter"))
 
 
 // 03 - ADD AND REMOVE
@@ -45,8 +46,10 @@ var limit = 10
 
 for (var i = 0; i <= limit; i++) { 
   total +=i
-  console.log(total) 
+  // total = total + i revient a faire la ligne du dessus
   }
+
+  console.log(total) 
 
 
 // 06 - REVERSE 
@@ -68,22 +71,22 @@ console.log(reverseSentence)
 
 for (var i = 0; i <= 100; i++){
   if (i % 3 === 0 && i % 5 === 0){
-    console.log("fizzbuzz")
+    console.log(`${i} fizzbuzz`)
   }
   // else if (i % 3 === 0 && i % 7 === 0){
     // console.log ("multiple7&3")
   //}
   else if (i % 3 === 0){
-    console.log("fizz")
+    console.log(`${i} fizz`)
   }
   else if (i % 5 === 0){
-    console.log("buzz")
+    console.log(`${i} buzz`)
   }
   else if (i % 7 === 0){
-    console.log(" ")
+    console.log("")
   }
   else {
-    console.log("variable i ", i)
+    console.log(i)
   }
 }
 
@@ -93,11 +96,11 @@ for (var i = 0; i <= 100; i++){
 var total = 0
 var limit = 10
 
-var i = 0
+var counter = 0
 
-while (i < limit){
-  i++
-  total += i
+while (counter < limit){
+  counter++
+  total += counter
 }
 console.log(total)
 
@@ -105,3 +108,21 @@ console.log(total)
 // BONUS 3
 
 var mates = ["Marco","Eloi","Jong","Hélène","Rébecca","Kevin JM","Kévin","Salwa","Hanaa","Ahmed","Alin","Jeremy","Vincent","Bilal","Edouard","Chaïma","Syrine","Séverin","Karimou","Evan"]
+
+var randomMates = mates[Math.floor(Math.random() * mates.length)]
+
+console.log(randomMates)
+
+
+// BONUS 4
+
+var randomArray = []
+var min = 0
+var max = 100
+
+for (var i = 0; i < 20; i++){
+  var number = Math.floor(Math.random() * (max - min + 1) + min)
+  randomArray.push(number)
+}
+
+console.table(randomArray)
