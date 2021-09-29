@@ -70,6 +70,9 @@ for (var i = 0; i <= 100; i++){
   if (i % 3 === 0 && i % 5 === 0){
     console.log("fizzbuzz")
   }
+  // else if (i % 3 === 0 && i % 7 === 0){
+    // console.log ("multiple7&3")
+  //}
   else if (i % 3 === 0){
     console.log("fizz")
   }
@@ -90,7 +93,15 @@ for (var i = 0; i <= 100; i++){
 var total = 0
 var limit = 10
 
-while (total < limit){
-  total ++
+var i = 0
+
+while (i < limit){
+  i++
+  total += i
 }
 console.log(total)
+
+
+// BONUS 3
+
+var mates = ["Marco","Eloi","Jong","Hélène","Rébecca","Kevin JM","Kévin","Salwa","Hanaa","Ahmed","Alin","Jeremy","Vincent","Bilal","Edouard","Chaïma","Syrine","Séverin","Karimou","Evan"]
