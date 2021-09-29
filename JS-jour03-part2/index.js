@@ -49,9 +49,44 @@ for (i = 0; i < square.length; i++){
 }
 
 
-// EXERCICE 3 BIS - TABLE DE MULTIPLICATION V1
+// EXERCICE 4 - TABLE DE MULTIPLICATION V1
 
 var tableDe3 = 3
 for(var i=1; i <= 10; i++){
     var resultat= tableDe3*i
-    console.log(tableDe3+ " * "+ i+ " = "+ resultat);}
+    console.log(tableDe3+ "x" + i+ "=" + resultat);}
+
+
+// EXERCICE 5 - TABLE DE MULTIPLICATION V2
+var space = " "
+
+for(var i=1; i <= 10; i++){
+    for (var j=0; j <= 10; j++) {
+    console.log(i, 'x', j, '=', i * j)}   
+    // console.log(`${i} x ${j} = ${i*j}`)}  --------> autre manière d'écrire le console.log
+    }
+
+
+// EXERCICE 6 - FACTORIELLE V1
+
+var resultatSept = 7;
+
+for(var i = 6; i !==0; i--){
+    console.log(`${i}`);
+    resultatSept *= i ;
+}
+console.log(`7! = ${resultatSept}`);
+
+
+// EXERCICE 7 - FACTORIELLE V2
+
+for(var i=8; i!==0; i--){
+    var resultat=1;
+    //console.log(`i = ${i}`);
+    for (var j=1;j<=i;j++){  
+        resultat*=j;
+        //console.log(`j = ${j}`);     
+    }
+    console.log(`${i}! = ${resultat}`);
+    
+}
