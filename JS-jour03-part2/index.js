@@ -41,6 +41,8 @@ for (i = 0; i < numbers.length; i++){
     console.log(puissance)
     square.push(puissance)
 }
+console.log(square)
+// résultat : [ 1, 4, 9, 16, 25 ]
 
 for (i = 0; i < square.length; i++){
     var racineCarré = Math.sqrt(square[i])
@@ -90,3 +92,42 @@ for(var i=8; i!==0; i--){
     console.log(`${i}! = ${resultat}`);
     
 }
+
+
+// EXERCICE 8 - SOMME DES CARRES
+
+var sommeCarre = 0
+for (var i = 5; i <= 10; i++){
+    var carre = i*i
+    console.log(carre)
+    sommeCarre += carre
+}
+console.log(sommeCarre)
+// résultat = 355
+
+
+// EXERCICE 9 - COMPTONS
+
+var multiple = 0
+
+for (i = 100; i < 1000; i++){
+    if (i%7 == 0){
+        console.log(i)
+        // affichage de tous les multiples de 7 compris entre 100 et 1000
+        multiple += 1
+    } 
+}
+console.log(multiple)
+// résultat = 128
+
+
+// EXERCICE 10 - CHANCEUX 
+
+for (i=0; i<20; i++){
+    if (i > 5){
+        console.log(i)
+    }
+}
+
+
+// EXERCICE 11 - DES BOITES
