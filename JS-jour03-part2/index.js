@@ -5,27 +5,29 @@
 
 var sommePair = 0
 
-for (var i = 11; i <= 47; i++){
-    if (i%2 == 0){
+for (var i = 11; i < 47; i++){
+    if (i%2 === 0){
         console.log(i)
+        sommePair = sommePair + i
     } 
-    sommePair = sommePair + i
 }
 console.log(sommePair)
+// résultat = 522
 
 
 // EXERCICES 2 - NOMBRES IMPAIRS
 
 var sommeImpair = 0
 
-for (var i = 109; i <= 588; i++){
-    if (i%2 != 0){
+for (var i = 109; i < 588; i++){
+    if (i%2 !== 0){
  // if (i % 2 == 0) continue    ------> autre solution pour afficher les nombres impairs
         console.log(i)
+        sommeImpair = sommeImpair + i
     }
-    sommeImpair = sommeImpair + i
 }
 console.log(sommeImpair)
+// résultat = 83520
 
 console.log("")
 
@@ -36,27 +38,33 @@ var numbers = [1, 2, 3, 4, 5]
 var square = []
 var roots = []
 
-for (i = 0; i < numbers.length; i++){
+for (var i = 0; i < numbers.length; i++){
     var puissance = numbers[i] * numbers[i]
+ // var puissance = numbers[i] ** 2 -----> autre manière d'écrire la variable puissance
     console.log(puissance)
     square.push(puissance)
 }
 console.log(square)
 // résultat : [ 1, 4, 9, 16, 25 ]
 
-for (i = 0; i < square.length; i++){
+for (var i = 0; i < square.length; i++){
     var racineCarré = Math.sqrt(square[i])
     console.log(racineCarré)
     roots.push(racineCarré)
 }
 
+console.log(racineCarré)
+// résultat : [1, 2, 3, 4, 5]
+
 
 // EXERCICE 4 - TABLE DE MULTIPLICATION V1
 
 var tableDe3 = 3
+
 for(var i=1; i <= 10; i++){
     var resultat= tableDe3*i
-    console.log(tableDe3+ "x" + i+ "=" + resultat);}
+    console.log(`${tableDe3} x ${i} = ${resultat}`)
+}
 
 
 // EXERCICE 5 - TABLE DE MULTIPLICATION V2
@@ -64,20 +72,21 @@ var space = " "
 
 for(var i=1; i <= 10; i++){
     for (var j=0; j <= 10; j++) {
-    console.log(i, 'x', j, '=', i * j)}   
-    // console.log(`${i} x ${j} = ${i*j}`)}  --------> autre manière d'écrire le console.log
-    }
+    console.log(`${i} x ${j} = ${i*j}`)
+    }   
+    console.log("")
+}
 
 
 // EXERCICE 6 - FACTORIELLE V1
 
 var resultatSept = 7;
 
-for(var i = 6; i !==0; i--){
-    console.log(`${i}`);
-    resultatSept *= i ;
+for(var i = 1; i < 7; i++){
+    console.log(i)
+    resultatSept *= i
 }
-console.log(`7! = ${resultatSept}`);
+console.log(`7! = ${resultatSept}`)
 
 
 // EXERCICE 7 - FACTORIELLE V2
