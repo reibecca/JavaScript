@@ -114,5 +114,38 @@ var result = format(3700)
 console.log(result)
 
 
+
 // BONUS 1
 
+var min = 6
+var max = 15
+
+function generatePassword (num){
+    for(i = 0; i === num.lenght; i++){
+        var random = Math.floor(Math.random() * (max - min + 1) + min)
+    }
+
+    if (random < 6 || random > 15){
+        console.log("error")
+    }
+} 
+num(8)
+console.log(num.toUpperCase())
+
+
+
+// BONUS 2
+
+var min = 1
+var max = 6
+var somme = 0
+
+function launchDice (numberOfDice){
+    for (let i = 0; i === numberOfDice; i++) {
+        var random2 = Math.floor(Math.random2() * (max - min + 1) + min)
+        var somme = somme += i
+    }
+    return `somme des dés = ${somme}`
+}
+numberOfDice(1)
+console.log(numberOfDice)
