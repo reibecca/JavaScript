@@ -69,45 +69,24 @@ console.log("")
 // La fonction retourne "Palindrome !" si le mot se lit dans les deux sens, sinon elle retourne "Nope"
 // Vérifiez que vous obtenez un positif avec l'argument "racecar" mais pas avec "laptop"
 
- function checkPal (str){
-    var mot = 0
-    var reverseMot = 0
-
-    for (i = 0; i < str.length; i++){
-        console.log(str.charAt(i))
+function checkPal(str) {
+    console.log(str)
+    var palindrome = str.split("")
+    console.log(palindrome)
+    var palindrome1 = palindrome.reverse()
+    console.log(palindrome1)
+    var palindrome2 = palindrome1.join("")
+    console.log(palindrome2)
+  
+    if (str === palindrome2) {
+      return "palindrome"
+    } else {
+      return "No palindrome"
     }
 }
-
-// if (mot === reverseMot){
-//     console.log("Palindrome !")
-// } else {
-//     console.log("Nope")
-// }
-
-checkPal("racecar")
-
-// function Palindrome(entree)
-// {
-//     var entree = prompt("racecar").toLowerCase();
-//     var entree_1 = [...entree].reverse().join('');
-// }
-// Palindrome();
-
-// var entree = prompt("racecar").toLowerCase();
-// var entree_1 = [...entree].reverse().join('');
-
-// if (entree === "") {
-//     console.log('racecar');
-// }
-
-// else if (entree === entree_1) {
-//     console.log(entree + ' est un palindrome');
-// }
-
-// else {
-//     console.log(entree + ' n\'est pas un palindrome');
-// }
-
+  
+var palindrome = checkPal("racecar")
+console.log(palindrome)
 
 
 
@@ -124,7 +103,24 @@ console.log("")
 // La fonction retourne une string avec la casse inverse : une majuscule deviendra minuscule et vice-versa
 // Appelez votre fonction avec l'argument "Hello World" et vérifiez que vous obtenez "hELLO wORLD"
 
-// function swap (str)
+function swap(str) {
+    var result = ""
+  
+    for (var i = 0; i < str.length; i++) {
+      var character = str[i]
+  
+      if (character === character.toUpperCase()) { // si character est une majuscule
+        result = result + character.toLowerCase()
+      } else {
+        result = result + character.toUpperCase()
+      }
+    }
+  
+    console.log(result)
+  }
+  
+  swap("Hello World")
+ 
 
 
 
