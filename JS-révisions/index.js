@@ -14,7 +14,7 @@ function sortLetters(str) {
   }
   console.log("taking konexio as a string");
   console.log(sortLetters("konexio"));
-
+  sortLetters("konexio")
 
 //////////////
 console.log("")
@@ -31,22 +31,22 @@ console.log("")
 
 function countEach (str){
     var xNumber = 0
-    var yNumber = 0
+    var oNumber = 0
 
     for (i = 0; i < str.length; i++){
         console.log(str.charAt(i))
 
-        if (str.charAt(i)=== "x"){
+        if (str.charAt(i) === "x"){ // str[i] === "x"
             xNumber += 1
         }
 
-        if (str.charAt(i)=== "o"){
-            yNumber += 1
+        if (str.charAt(i) === "o"){ // str[i] === "o"
+            oNumber += 1
         }
 
      }
 
-    if (xNumber === yNumber){
+    if (xNumber === oNumber){
         console.log(true)
          } else {
         console.log(false)
@@ -73,17 +73,16 @@ console.log("")
     var mot = 0
     var reverseMot = 0
 
-    for (i = 0; i < mot.length; i++){
-        var mot = mot.toString
-        var reverseMot = mot.reverse().join("")
+    for (i = 0; i < str.length; i++){
+        console.log(str.charAt(i))
     }
 }
 
-if (mot === reverseMot){
-    console.log("Palindrome !")
-} else {
-    console.log("Nope")
-}
+// if (mot === reverseMot){
+//     console.log("Palindrome !")
+// } else {
+//     console.log("Nope")
+// }
 
 checkPal("racecar")
 
@@ -159,6 +158,15 @@ console.log("")
 // Tester votre exercice 1 avec un mélange de lettres majuscules et minuscules. Est ce que cela fonctionne toujours ?
 // Si non corrigez le !
 
+// function sortLetters(str) {
+//     var wordArray = str.split(""); // splits the string
+//     word = wordArray.sort().join(""); // sort the array and joins to form a string
+//     return word; // returns the result
+//   }
+  
+//   console.log(sortLetters("AsumaSensei"));
+
+  // résultat = ASaeeimnssu ---> la fonction de mon exo 1 ne fonctionne pas avec des lettres majuscules
 
 //////////////
 console.log("")
