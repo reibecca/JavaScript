@@ -1,0 +1,47 @@
+body{
+    background-color: lightyellow;
+}
+h1{
+    font-family: 'Rampart One', cursive;
+    text-align: center;
+    color: #371A46;
+    background-color: #F8D105;
+}
+
+#ordi {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 50px 0;
+}
+
+#ordi img{
+    width: 250px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+#rpc-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.shif{
+    display: flex;
+    flex-direction: column;
+}
+
+#rpc-container img {
+    width: 150px;
+}
+
+button{
+    padding: 10px;
+    margin: 20px;
+    border-radius: 30px;
+    background-color: #96C5FD;
+    border: 3px solid #4B82FF;
+    font-family: 'VT323', monospace;
+    color: white;
+    font-weight: bold;
+}
