@@ -19,41 +19,54 @@ imgScissor.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseau
 
 
 
-// On déclare une fonction que l'on va appeler lors du click
-function onButtonRock() {
-    console.log("I choose rock")
-}
-
-function onButtonPapper() {
-    console.log("I choose paper")
-}
-
-function onButtonScissor() {
-    console.log("I choose scissor")
-}
-
-
 
 // Faire une fonction qui va choisir aléatoirement le signe de l'IA
 
 var min = 1
 var max = 3
-var choose = 0
 
 function randomIA(){
+
+    var game = ["rock", "paper", "scissor"]
     
-    var random = Math.floor(Math.random() * (max - min + 1) + min)
+    var random = game[Math.floor(Math.random() * game.length)]
     console.log(`L'IA a joué ${random}`)
 
     var choixIA = document.getElementById("choixIA")
-    if (random === 1){
+    if (random === "rock"){
         choixIA.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseaux/img/pierre.png") 
-    } else if (random === 2){
+    } else if (random === "paper"){
         choixIA.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseaux/img/feuille.png")
-    } else if (random === 3){
+    } else if (random === "scissor"){
         choixIA.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseaux/img/ciseaux.png")
     }
+    return random;
 }
-randomIA()
 
 
+
+// On déclare une fonction que l'on va appeler lors du click
+function onButtonClick(choice) {
+    console.log(`Tu as joué ${choice}`)
+    var choixIA = randomIA() 
+    result(choice, choixIA)
+}
+
+
+// Comparaison faite entre les paramètres "ia" et "me"
+var compteurIA = 0
+var compteurPlayer = 0
+
+function result(me, ia) {
+    if (me === ia){
+        console.log("Il y a égalité")
+    }else if ((me === "paper" && ia === "rock") || (me === "scissor" && ia === "paper") || (me === "rock" && ia === "scissor")){
+        compteurPlayer += 1
+        console.log(compteurPlayer);
+        console.log("Tu as gagné !")
+    }else {
+        compteurIA +=1
+        console.log(compteurIA);
+        console.log("Tu as perdu :(")
+    }
+}
