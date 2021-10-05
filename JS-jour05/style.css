@@ -3,11 +3,7 @@ body{
     margin: 0;
 }
 
-#shifumi{
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 100px;
-}
+/* ----- TITRE ----- */
 
 h1{
     /* font-family: 'Rampart One', cursive; */
@@ -19,6 +15,13 @@ h1{
     background-color: #371A46;
     padding: 20px 0 20px 0px;
     margin: 0;
+}
+
+
+#shifumi{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px;
 }
 
 
@@ -39,6 +42,15 @@ h1{
     width: 250px;
     border-radius: 50%;
 }
+
+#choix{
+    display: flex;
+    align-items: center;
+}
+#choixIA{
+    width: 250px;
+}
+
 
 
 /* ----- BOUTONS PIERRE PAPIER CISEAU ----- */
@@ -70,6 +82,11 @@ button{
     color: white;
     font-weight: bold;
 }
+
+button:hover{
+    background-color: #ecd657;
+}
+
 
 
 /* ----- RESULATS ------ */

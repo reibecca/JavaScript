@@ -1,6 +1,6 @@
 // EXERCICES JAVA SCRIPT DANS UNE PAGE WEB 
 
-console.log(document)
+// console.log(document)
 
 
 // On cible notre element : on affecte une image à l'IA pour la représenter visuellement 
@@ -40,18 +40,20 @@ var min = 1
 var max = 3
 var choose = 0
 
-function randomIA(num){
-    for (var i=0; i < 3; i++){
+function randomIA(){
     
-        var random = Math.floor(Math.random() * (max - min + 1) + min)
+    var random = Math.floor(Math.random() * (max - min + 1) + min)
+    console.log(`L'IA a joué ${random}`)
 
-        if (random >= 2){
-            console.log(random)
-            choose = choose + random
-        }
+    var choixIA = document.getElementById("choixIA")
+    if (random === 1){
+        choixIA.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseaux/img/pierre.png") 
+    } else if (random === 2){
+        choixIA.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseaux/img/feuille.png")
+    } else if (random === 3){
+        choixIA.setAttribute("src", "https://farrradise.github.io/PierreFeuilleCiseaux/img/ciseaux.png")
     }
-    console.log(i)
 }
-randomIA(2)
+randomIA()
 
 
