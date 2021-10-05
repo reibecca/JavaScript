@@ -4,24 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice Shifumi</title>
+    <title>Shi Fu Mi</title>
+    <meta name="author" content="Rébecca Kaci">
+    <meta name="description" content="Jouer à Shi Fu Mi (pierre, feuille, ciseau) contre une IA">
+    <meta name="keywords" content="jeu, shifumi, pierre feuille ciseau">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Days+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>DO YOU WANNA PLAY SHIFUMI ?</h1>
+    <h1>DO YOU WANNA PLAY SHI FU MI ?</h1>
 
     <section id="shifumi">
 
         <section id="ordi">
             <!-- <h2>IA</h2> -->
-            <img id= "ia">
+            <div class="img-ia"><img id= "ia"></div>
         </section>
 
 
@@ -31,21 +33,27 @@
             <div id="rpc-container">
 
                 <div class="shif">
-                    <img id="rock">
-                    <button id="pierre">pierre</button>
+                    <button id="pierre" onClick="onButtonRock()"><img id="rock"></button>
                 </div>
                 <div class="shif">
-                    <img id="paper">
-                    <button id="feuille">feuille</button>
+                    <button id="feuille" onClick="onButtonPapper()"><img id="paper"></button>
                 </div>
                 <div class="shif">
-                    <img id="scissor">
-                    <button id="ciseaux">ciseaux</button>
+                    <button id="ciseaux" onClick="onButtonScissor()"><img id="scissor"></button>
                 </div>
 
             </div>
 
         </section>
+
+    </section>
+
+    <section id="result">
+        <div id="result-container">
+            <h3>The IA : </h3>
+            <h2>RESULT</h2>
+            <h3>You : </h3>
+        </div>
 
     </section>
     
