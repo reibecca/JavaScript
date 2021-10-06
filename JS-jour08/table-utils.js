@@ -4,7 +4,9 @@
 // EXERCICE 03 - SEPARATE TABLE
 
 const multiply = require("./multiply")
-var multiplication = require("./multiply")
+//var multiply = require("./multiply")
+
+var args = process.argv.slice(2);
 
 function addition (nbrAdd){
     var randomNbr = nbrAdd
@@ -14,6 +16,6 @@ function addition (nbrAdd){
         console.log(`${randomNbr} + ${i} = ${resultat}`)
     }
 }
-addition()
+addition(parseInt(args[0]))
 
-module.export = (multiply, addition)
+module.exports = {multiply, addition}
