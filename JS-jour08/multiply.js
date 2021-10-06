@@ -22,3 +22,4 @@ function multiply (nbr){
 multiply(parseInt(args[0])) // -----> affiche la table de n'importe quel argument dans le terminal avec Node
 
 
+module.exports = (multiply)

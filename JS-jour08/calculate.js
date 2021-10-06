@@ -26,6 +26,7 @@ function calculate (num1, num2, operator){
         console.log(num1 % num2)
     }
 }
+// calculate(5,4, '*')
 calculate(parseInt(args[0]), parseInt(args[1]), '*')
 
 //console.log(process.argv)
