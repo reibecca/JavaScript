@@ -50,7 +50,7 @@ function onButtonClick(choice) {
     console.log(`Tu as joué ${choice}`)
     var choixIA = randomIA() 
     result(choice, choixIA)
-    createElement('h3', result, )
+    createElement('h3', result,)
 }
 
 
@@ -75,22 +75,22 @@ function result(me, ia) {
 
 // Implémenter un système de score, avec affichage en temps réel des points, avec historique des rounds, et avec l'affichage d'un message en fin du match.
 
-var scoreIA = 0
-var scorePlayer = 0
+// var scoreIA = 0
+// var scorePlayer = 0
 
-if (scoreIA === 3 || scorePlayer === 3){``
-console.log()
-}
+// if (scoreIA === 3 || scorePlayer === 3){``
+// console.log()
+// }
 
-function createElement (element,text,getId){
+// function createElement (element,text,getId){
     
-    var newElement = document.createElement(element)
+//     var newElement = document.createElement(element)
     
-    var txt = document.createTextNode(text)
+//     var txt = document.createTextNode(text)
     
-    newElement.appendChild(txt)
+//     newElement.appendChild(txt)
     
-    var gotElement = document.getElementById(getId)
+//     var gotElement = document.getElementById(getId)
     
-    gotElement.appendChild(newElement)
-}
+//     gotElement.appendChild(newElement)
+// }
