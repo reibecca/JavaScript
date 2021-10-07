@@ -4,16 +4,14 @@
 // EXERCICE 03 - SEPARATE TABLE
 
 const multiply = require("./multiply")
-//var multiply = require("./multiply")
+// var multiply = require("./multiply")
 
 var args = process.argv.slice(2);
 
 function addition (nbrAdd){
-    var randomNbr = nbrAdd
-
     for(var i=1; i <= 10; i++){
-        var resultat = randomNbr + i
-        console.log(`${randomNbr} + ${i} = ${resultat}`)
+        var resultat = nbrAdd + i
+        console.log(`${nbrAdd} + ${i} = ${resultat}`)
     }
 }
 addition(parseInt(args[0]))

@@ -3,12 +3,6 @@
 
 // EXERCICE 01 - CALCULATOR
 
-var args = process.argv.slice(2);
-
-// console.log(parseInt(args[0]) * parseInt(args[1])); 
-// console.log(args)
-
-
 function calculate (num1, num2, operator){
     if (operator === '+'){
         console.log(num1 + num2)
@@ -19,20 +13,20 @@ function calculate (num1, num2, operator){
     if (operator === '*'){
         console.log(num1 * num2)
     }
-    if (operator === '-'){
-        console.log(num1 + num2)
+    if (operator === '/'){
+        console.log(num1 / num2)
     }
     if (operator === '%'){
         console.log(num1 % num2)
     }
 }
-// calculate(5,4, '*')
-calculate(parseInt(args[0]), parseInt(args[1]), '*')
+// calculate(5,4, '*') ---> lancer la fonction avec des paramètres
 
-//console.log(process.argv)
+var parameters = process.argv.slice(2)
+var parameter1 = parseInt(parameters[0])
+var parameter2 = parseInt(parameters[1])
+var parameter3 = (parameters[2])
 
-// var args = process.argv.slice(2);
+calculate (parameter1, parameter2, parameter3)
 
-// console.log(parseInt(args[0]) * parseInt(args[1])); 
-// console.log(args)
 
