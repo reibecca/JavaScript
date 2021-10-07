@@ -17,6 +17,9 @@ function whatDayIsToday (){
 }
 var today = whatDayIsToday()
 
+console.log("")
+
+
 
 // EXERCICE 02 - MOIS COURANT
 
@@ -33,36 +36,33 @@ function whatMonthIsIt (){
 }
 var ourMonth = whatMonthIsIt()
 
+console.log("")
 
 
 
+// EXERCICE 03 - FORMAT
+
+function formatDate (aaaa, mm, jj){
+    var temps = new Date()
+
+    var jour = temps.getDay()
+    console.log(jour)
+
+    var mois = temps.getMonth()
+    console.log(mois)
+
+    var annee = temps.getFullYear()
+    console.log(annee)
 
 
+    if (jour < 10){
+        jour = "0" + jour
+    }if (mois < 10){
+        mois = "0" + mois
+    }
 
+    console.log(`${jour}/${mois}/${annee}`)
 
+}
+var dateFormat = formatDate()
 
-
-
-
-
-
-
-
-
-
-
-// var weekDays = [dimanche,lundi, mardi, mercredi, jeudi, vendredi, samedi,]
-
-// function whatDayIsToday (day, month, year){
-//     var year = new Date.getFullYear()
-//     console.log(year)
-
-//     var month = Date.getMonth()
-//     console.log(month)
-
-//     var day = Date.getDate()
-//     console.log(day)
-
-//     return `Aujourd'hui nous sommes le ${day} ${month} ${year}`
-// }
-// whatDayIsToday(5)
