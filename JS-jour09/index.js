@@ -18,6 +18,22 @@ function whatDayIsToday (){
 var today = whatDayIsToday()
 
 
+// EXERCICE 02 - MOIS COURANT
+
+var monthOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "Octobre", "November", "December"]
+
+function whatMonthIsIt (){
+    var temps = new Date();
+    var month = temps.getMonth();
+    console.log(month);
+
+    console.log(monthOfYear[month])
+
+    console.log(`Aujourd'hui nous sommes en ${monthOfYear[month]}`)
+}
+var ourMonth = whatMonthIsIt()
+
+
 
 
 
