@@ -44,7 +44,7 @@ console.log("")
 
 function formatDate (aaaa, mm, jj){
     var temps = new Date()
-
+    
     var jour = temps.getDay()
     console.log(jour)
 
@@ -66,3 +66,41 @@ function formatDate (aaaa, mm, jj){
 }
 var dateFormat = formatDate()
 
+console.log("")
+
+
+
+// EXERCICE 04 - AGE
+
+// function calculateAge (){
+//     var temps = new Date()
+
+//     var bornDay = new Date("2021-10-07")
+//     console.log(bornDay);
+
+//     var age = temps.getFullYear() - bornDay.getFullYear()
+    
+//     if (temps.getMonth() < bornDay.getMonth()){
+//         age -= 1
+//     }if (temps.getDate() < bornDay.getDate()){
+//         age -=1
+//     }
+
+//     console.log(age);
+// }
+// calculateAge()
+
+
+
+function calculateAge (bornDay){
+    var temps = new Date()
+
+    var age = temps.getFullYear() - bornDay.getFullYear()
+    
+    if (temps.getMonth() === bornDay.getMonth() && temps.getDate() < bornDay.getDate()){
+        age -= 1
+    }
+
+    console.log(age);
+}   
+calculateAge(new Date("2021-10-09"))
