@@ -102,6 +102,9 @@ var numbers = array.filter(function(number){
 console.log(numbers)
 
 
+console.log("")
+
+
 
 // EXERCICE 05 - FILTER EVEN
 
@@ -112,4 +115,47 @@ var even = numbers.filter(function(evenNum){
 })
 
 console.log(even)
- 
+
+
+console.log("")
+
+
+
+// EXERCICE 06 - CAKES
+
+var cakes = [
+	{
+		name: "cake",
+		flavor: "vanilla",
+		status: "available"
+	},
+	{
+		name: "brownie",
+		flavor: "chocolate",
+		status: "available"
+	},
+	{
+		name: "pie",
+		flavor: "strawberry",
+		status: "available"
+	},
+	{
+		name: "muffin",
+		flavor: "pistachio",
+		status: "available"
+	},
+	{
+		name: "donut",
+		flavor: "chocolate",
+		status: "available"
+	},
+]
+
+
+var chocolateCakes = cakes.filter(function(choco){
+    return choco.flavor === "chocolate"
+})
+var soldOutCakes = chocolateCakes.map(function(soldOut){
+    return soldOut.status = "sold out !"
+})
+console.log(chocolateCakes)
