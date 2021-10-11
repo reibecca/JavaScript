@@ -24,5 +24,15 @@ console.log(`La date d'aujourd'hui est ${dateOfToday}`)
 
 
 // BONUS VERSION EXO 4 
-var birthDate = moment("19970826", "YYYYMMDD").fromNow()
+
+// Cette technique ne fonctionne pas, car elle donne une date approximative
+var birthDate = moment("19970826", "YYYYMMDD").fromNow(true)
 console.log(birthDate)
+
+// Solution à l'exercice
+function calculateAge(str){
+    var age = moment().diff(moment(str), "years")
+    console.log(moment.duration(age, "years").humanize())
+}
+
+calculateAge("1980-12-01")

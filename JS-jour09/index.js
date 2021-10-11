@@ -3,7 +3,7 @@
 
 // EXERCICE 01 - AUJOURD'HUI
 
-var weekDays = ["dimanche","lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
+var week = ["dimanche","lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"]
 
 function whatDayIsToday (){
 
@@ -11,9 +11,9 @@ function whatDayIsToday (){
     var day = temps.getDay();
     console.log(day);
 
-    console.log(weekDays[day])
+    console.log(week[day])
 
-    console.log(`Aujourd'hui nous sommes le ${weekDays[day]}`)
+    console.log(`Aujourd'hui nous sommes le ${week[day]}`)
 }
 var today = whatDayIsToday()
 
@@ -43,15 +43,15 @@ console.log("")
 // EXERCICE 03 - FORMAT
 
 function formatDate (aaaa, mm, jj){
-    var temps = new Date()
+    var date = new Date()
     
-    var jour = temps.getDay()
+    var jour = date.getDate()
     console.log(jour)
 
-    var mois = temps.getMonth()
+    var mois = date.getMonth() + 1
     console.log(mois)
 
-    var annee = temps.getFullYear()
+    var annee = date.getFullYear()
     console.log(annee)
 
 
@@ -64,7 +64,7 @@ function formatDate (aaaa, mm, jj){
     console.log(`${jour}/${mois}/${annee}`)
 
 }
-var dateFormat = formatDate()
+formatDate()
 
 console.log("")
 
@@ -92,15 +92,15 @@ console.log("")
 
 
 
-function calculateAge (bornDay){
+function calculateAge (birthDate){
     var temps = new Date()
 
-    var age = temps.getFullYear() - bornDay.getFullYear()
+    var age = temps.getFullYear() - birthDate.getFullYear()
     
-    if (temps.getMonth() === bornDay.getMonth() && temps.getDate() < bornDay.getDate()){
+    if (temps.getMonth() === birthDate.getMonth() && temps.getDate() < birthDate.getDate()){
         age -= 1
     }
 
     console.log(age);
 }   
-calculateAge(new Date("2021-10-09"))
+calculateAge(new Date("1987-08-26"))
