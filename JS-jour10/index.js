@@ -57,4 +57,27 @@ var double = array.map(function(number){
 })
 
 console.log(double)
+
+
+
+// Exercice 03 - MAP NAMES
+
+var longNames = [
+	{
+		firstName: "Jane",
+		lastName: "Doe"
+	},
+	{
+		firstName: "John",
+		lastName: "Smith"
+	}
+]
+
+console.log(longNames)
+
+var shortNames = longNames.map(function(fullName){
+    return {name: fullName.firstName + fullName.lastName}
+})
+
+console.log(shortNames)
  
