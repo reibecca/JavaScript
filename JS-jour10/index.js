@@ -159,3 +159,10 @@ var soldOutCakes = chocolateCakes.map(function(soldOut){
     return soldOut.status = "sold out !"
 })
 console.log(chocolateCakes)
+
+
+console.log("")
+
+
+
+// BONUS - JEU DU PENDU
