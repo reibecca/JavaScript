@@ -46,6 +46,8 @@ fs.unlink("jour07.txt", function (err, data){
     }
 })
 
+console.log("")
+
 
 
 // EXERCICE 02 - MAP DOUBLE 
@@ -57,6 +59,9 @@ var double = array.map(function(number){
 })
 
 console.log(double)
+
+
+console.log("")
 
 
 
@@ -80,4 +85,19 @@ var shortNames = longNames.map(function(fullName){
 })
 
 console.log(shortNames)
+
+
+console.log("")
+
+
+
+// EXERCICE 04 - FILTER NUMBERS 
+
+var array = [1, "toto", 34, "javascript", 8]
+
+var numbers = array.filter(function(number){
+    return parseInt(number) === number
+})
+
+console.log(numbers)
  
