@@ -39,10 +39,22 @@ fs.readFile("jour07.txt", function (err, data) {
 
 
  //-- Supprimer le fichier 
- fs.unlink("jour07.txt", function (err, data){
+fs.unlink("jour07.txt", function (err, data){
     if (err) {
         console.error(err);
         return;
     }
 })
+
+
+
+// EXERCICE 02 - MAP DOUBLE 
+
+var array = [1, 2, 3, 4, 5]
+
+var double = array.map(function(number){
+    return number * 2
+})
+
+console.log(double)
  
