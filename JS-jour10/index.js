@@ -15,7 +15,7 @@ fs.readFile("jour07.txt", function (err, data) {
     }
  
     console.log("Lecture du contenu de jour07.txt : " + data.toString());
- })
+})
 
 
 
@@ -42,7 +42,6 @@ fs.readFile("jour07.txt", function (err, data) {
 fs.unlink("jour07.txt", function (err, data){
     if (err) {
         console.error(err);
-        return;
     }
 })
 
@@ -67,6 +66,7 @@ console.log("")
 
 // Exercice 03 - MAP NAMES
 
+//-- On créee un tableau de deux objets
 var longNames = [
 	{
 		firstName: "Jane",
@@ -81,7 +81,7 @@ var longNames = [
 console.log(longNames)
 
 var shortNames = longNames.map(function(fullName){
-    return {name: fullName.firstName + fullName.lastName}
+    return {name: `${fullName.firstName}  ${fullName.lastName}`}
 })
 
 console.log(shortNames)
@@ -96,7 +96,9 @@ console.log("")
 var array = [1, "toto", 34, "javascript", 8]
 
 var numbers = array.filter(function(number){
-    return parseInt(number) === number
+
+    // return parseInt(number) === number ---> fonctionne mais pas assez clean comme solution
+    return typeof number === "number"  // ---> meilleure solution car donne le type de l'élément
 })
 
 console.log(numbers)
@@ -123,6 +125,7 @@ console.log("")
 
 // EXERCICE 06 - CAKES
 
+//-- cette variable est un tableau un tableau d'objets
 var cakes = [
 	{
 		name: "cake",
@@ -156,8 +159,9 @@ var chocolateCakes = cakes.filter(function(choco){
     return choco.flavor === "chocolate"
 })
 var soldOutCakes = chocolateCakes.map(function(soldOut){
-    return soldOut.status = "sold out !"
+    return soldOut.status = "sold out !" //----> problème : modifie la valeur du tableau initial
 })
+
 console.log(chocolateCakes)
 
 
